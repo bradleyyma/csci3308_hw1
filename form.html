@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <style media="screen">
+      .switch-field{
+        display: flex;
+      }
+      .switch-field input {
+        position: absolute !important;
+        clip: rect(0, 0, 0, 0);
+      }
+      .switch-field label{
+        background-color: #e4e4e4;
+        text-align: center;
+      }
+      .switch-field label:hover{
+        cursor: pointer;
+      }
+      .switch-field input:checked + label{
+        background-color: #8888bb;
+      }
+      .switch-field label:first-of-type{
+        border-radius: 4px 0 0 4px;
+      }
+      .switch-field label:last-of-type {
+        border-radius: 0 4px 4px 0;
+      }
+
+      body{
+        margin: 100px;
+        padding: 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Add an Article</h1>
+    <form class="" action="index.html" method="post">
+      <div class="form-group">
+        <label for="articleTitle">Article Title</label>
+        <input type="text" class="form-control" id="articleTitle" placeholder="Title">
+      </div>
+      <div class="form-group">
+        <label for="authorName">Author Name</label>
+        <input type="text" class="form-control" id="authorName" placeholder="Name">
+      </div >
+      <div class="form-group">
+        <label for="fileSubmission">Upload a FIle:</label>
+        <input type="file" class="form-control-file" id="fileSubmission">
+      </div>
+      <div class="form-group">
+        <label for="pageType">Pages</label>
+        <div class="form-group">
+          <select class="form-control browser-default custom-select" id="pageType" name="">
+            <option>Academics</option>
+            <option>Sports</option>
+            <option>Research</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="aritcleText">Article Text</label>
+        <textarea class="form-control" rows="8" cols="80"></textarea>
+      </div>
+      <div class="row">
+        <div class="form-group col">
+          <label for="tagSelect">Select Tags</label>
+          <br>
+          <div class="form-check form-check-inline">
+            <input type="checkbox" class="form-check-input" id="tagSelect1">
+            <label for="tagSelect1" class="form-check-label">Python</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input type="checkbox" class="form-check-input" id="tagSelect2">
+            <label for="tagSelect2" class="form-check-label">C++</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input type="checkbox" class="form-check-input" id="tagSelect3">
+            <label for="tagSelect3" class="form-check-label">Java</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input type="checkbox" class="form-check-input" id="tagSelect4">
+            <label for="tagSelect4" class="form-check-label">Scala</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input type="checkbox" class="form-check-input" id="tagSelect5">
+            <label for="tagSelect5" class="form-check-label">Perl</label>
+          </div>
+        </div>
+        <div class="form-group col">
+          <label for="publicSelect">Visibility</label>
+          <div id="publicSelect" class="switch-field">
+              <input type="radio" id="publicSelect1" name="toggle" checked>
+              <label for="publicSelect1" class="btn">Public</label>
+              <input type="radio" id="publicSelect2" name="toggle">
+              <label for="publicSelect2" class="btn">Private</label>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="form-group">
+        <label for="login">Login to Finish Submitting</label>
+        <input type="text" class="form-control" id="login" placeholder="Username">
+        <input type="password" class="form-control" id="login" placeholder=Password>
+        <input type="checkbox" id="rememberMe">
+        <small for="rememberMe" class="form-check-label">Remember me</small>
+        <button type="button" class="btn btn-primary form-control" name="button">Submit</button>
+
+      </div>
+    </form>
+
+  </body>
+</html>
